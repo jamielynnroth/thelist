@@ -74,6 +74,20 @@ h2 {
 	padding: 0;
 	margin-bottom: 15px;
 	margin-top:0;
+	color:#008C85;
+}
+
+h4 {
+	font-family: "Quicksand";
+	font-weight: 500;
+	font-size: 14px;
+	padding:0 0 0 10px;
+	margin:0;
+	display:inline;
+	line-height: 20px;
+	vertical-align: middle;
+	color: gray;
+	display:none;
 }
 
 #notepad {
@@ -84,6 +98,7 @@ h2 {
 	background: #D1FFAB;
 	border-radius: 5px;
 	padding: 15px 20px 10px 15px;
+	-webkit-box-shadow: 2px 2px 5px gray;
 }
 
 #list th {
@@ -94,18 +109,19 @@ h2 {
 	color: #024059;
 	text-align: left;
 }
-#list td {
+.list_item {
 	font-family: "Quicksand";
 	font-size: 20px;
 	font-weight: 300;
 }
 
-#list form td tr input:checked {
+.checked {
 	text-decoration: line-through;
+	/*color:red;*/
 }
 
-#list td:hover {
-	text-decoration: underline;
+#list td span:hover {
+	border-bottom:dotted 1px black;
 }
 
 .arrow-down {
