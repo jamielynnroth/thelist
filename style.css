@@ -1,0 +1,130 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+ p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, header, details, figcaption, figure, 
+footer, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {list-style: none;
+}
+
+blockquote, q {quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	height: 100%;
+}
+/***********************************************************************************/
+html {
+	background-image: url("linedpaper.png");
+	min-width: 450px;
+}
+
+
+
+.header {
+	text-align: center;
+}
+
+h1 {
+	font-family: "Oleo Script Swash Caps";
+	font-size: 75px;
+	font-weight:700;
+	padding: 5px;
+	margin: 0;
+	color: #024059;
+}
+
+h2 {
+	font-family: "Quicksand";
+	font-weight: 500;
+	padding: 0;
+	margin-bottom: 15px;
+	margin-top:0;
+}
+
+#notepad {
+	width: 400px;
+	background:white;
+/*	height: 600px;*/
+	margin: 0 auto;
+	background: #D1FFAB;
+	border-radius: 5px;
+	padding: 15px 20px 10px 15px;
+}
+
+#list th {
+	font-family: "Oleo Script Swash Caps";
+	font-weight:400;
+	font-size: 25px;
+	padding-bottom: 10px;
+	color: #024059;
+}
+#list td {
+	font-family: "Quicksand";
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.arrow-down {
+	width:0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #008C85;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
