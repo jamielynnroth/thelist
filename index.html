@@ -20,22 +20,31 @@
 	</div><!-- .header -->
 
 	<div id="notepad">
-		<table id="list">
-			<th>Don't forget: </th>
+		<ul id="list">
+			<h3>Don't forget: </h3>
 			<form>
-			<tr>
-				<td class="list_item"><input type="checkbox" name="item" value ="Apples"> <span contenteditable="true">Apples</span><h4>x</h4></td>
-			</tr>
-			<tr>
-				<td class="list_item"><input type="checkbox" name="item" value ="Bananas"> <span contenteditable="true">Bananas</span><h4>x</h4></td>
-			</tr>
-		</form>
-		</table>
+			
+				<li class="list_item"><input type="checkbox" name="item" value ="Apples"> <span contenteditable="true">Add an item!</span><h4 class='toggle'>x</h4></li>
+	
+				<!-- <li class="list_item"><input type="checkbox" name="item" value ="Bananas"> <span contenteditable="true">Bananas</span><h4 class='toggle'>x</h4></li>
+		 -->
+			</form>
+		</ul>
 
 		<div class="arrow-down">
+			<!-- css down arrow button -->
+		</div> <!-- .arrow-down -->
+	
+		<div id="remove">
+			<h5><span>Remove Checked</span> | </h5>	
+		</div> <!-- #remove-->
+
+		<div id="clear">
+			<h5><span>Clear list</span></h5>	
 		</div>
 
-	</div>
+		
+	</div> <!-- #notepad -->
 
 
 

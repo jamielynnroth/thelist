@@ -53,6 +53,9 @@ html {
 	min-width: 450px;
 }
 
+.wrapper {
+	position:relative;
+}
 
 
 .header {
@@ -77,6 +80,16 @@ h2 {
 	color:#008C85;
 }
 
+h3 {
+	font-family: "Oleo Script Swash Caps";
+	font-weight:400;
+	font-size: 25px;
+	padding-bottom: 10px;
+	color: #024059;
+	text-align: left;
+	margin: 0;
+}
+
 h4 {
 	font-family: "Quicksand";
 	font-weight: 500;
@@ -87,8 +100,21 @@ h4 {
 	line-height: 20px;
 	vertical-align: middle;
 	color: gray;
-	display:none;
 }
+
+h5 {
+	font-family: "Quicksand";
+	font-weight:500;
+	font-size:12px;
+	margin:0;
+	padding:0;
+}
+
+.toggle{
+	display: none;
+}
+
+
 
 #notepad {
 	width: 400px;
@@ -97,18 +123,12 @@ h4 {
 	margin: 0 auto;
 	background: #D1FFAB;
 	border-radius: 5px;
-	padding: 15px 20px 10px 15px;
+	padding: 15px 20px 0 15px;
 	-webkit-box-shadow: 2px 2px 5px gray;
 }
 
-#list th {
-	font-family: "Oleo Script Swash Caps";
-	font-weight:400;
-	font-size: 25px;
-	padding-bottom: 10px;
-	color: #024059;
-	text-align: left;
-}
+
+
 .list_item {
 	font-family: "Quicksand";
 	font-size: 20px;
@@ -120,7 +140,9 @@ h4 {
 	/*color:red;*/
 }
 
-#list td span:hover {
+/*#list td span:hover */
+
+.hover_span {
 	border-bottom:dotted 1px black;
 }
 
@@ -131,13 +153,26 @@ h4 {
 	border-right: 10px solid transparent;
 	border-top: 10px solid #008C85;
 	margin: 0 auto;
+	position:relative;
+	bottom: -15px;
 }
 
 
+#clear {
+	margin: 0;
+	position: relative;
+	top: 31px;
+	left: 363px;
+	display:inline;
+}
 
-
-
-
+#remove {
+	margin:0;
+	position:relative;
+	top:45px;
+	left:249px;
+	display:inline;
+}
 
 
 
