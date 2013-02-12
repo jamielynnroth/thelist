@@ -9,21 +9,35 @@ $(document).ready(function() {
 		};// internal if
 }); // change listener
 
-// Roll over arrow to insert tr
+// Click arrow to insert tr
 $('.arrow-down').click(function(){
-	$('#list').after('<tr><td class="list_item"><input type="checkbox" name="item"  value ="New Item"> <span contenteditable="true">New Item</span><h4>x</h4></td></tr>');
+	 		$('#li_clone').clone().appendTo('#list').show();
+	// $('#list').after('<tr><td class="list_item"><input type="checkbox" name="item"  value ="New Item"> <span contenteditable="true">New Item</span><h4>x</h4></td></tr>');
 })
 
 
 // Insert a new tr when editing td and enter keystroke occurs
 // TODO Make this affect new item rows also
-	$(this).find('#list li span').keypress(function(event){
+	$(this).find('#list li span').on("keypress", (function(event){
 	var keycode = (event.keycode ? event.keycode : event.which);
 	if (keycode =='13'){
  		event.preventDefault();
- 		$('#list').after('<tr><td class="list_item"><input type="checkbox" name="item"  value ="New Item"> <span contenteditable="true">New Item</span><h4>x</h4></td></tr>');
- 	}; //internal if
-  }); //keypress function
+ 		console.log('hey!');
+ 		// $('#list').after('<tr><td class="list_item"><input type="checkbox" name="item"  value ="New Item"> <span contenteditable="true">New Item</span><h4>x</h4></td></tr>');
+ 		$('#li_clone').clone().appendTo('#list').show();
+
+ 	} //internal if
+  }) //keypress function
+); // on
+
+	// $(this).find('#list li span').keypress(function(event){
+	// var keycode = (event.keycode ? event.keycode : event.which);
+	// if (keycode =='13'){
+ // 		event.preventDefault();
+ // 		$('#list').after('<tr><td class="list_item"><input type="checkbox" name="item"  value ="New Item"> <span contenteditable="true">New Item</span><h4>x</h4></td></tr>');
+ // 	}; //internal if
+ //  }); //keypress function
+
 
 
 // Show h4 upon rollover of each li, underline span on rollover
