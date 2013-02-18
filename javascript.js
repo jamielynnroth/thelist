@@ -18,14 +18,14 @@ $('.arrow-down').click(function(){
 
 // Insert a new tr when editing td and enter keystroke occurs
 // TODO Make this affect new item rows also
-	$(this).find('#list li span').on("keypress", (function(event){
+	$(this).find('#list').on("keypress", 'li', (function(event){
 	var keycode = (event.keycode ? event.keycode : event.which);
 	if (keycode =='13'){
+		// console.log('hey!');
  		event.preventDefault();
- 		console.log('hey!');
+ 		// console.log('hey!');
  		// $('#list').after('<tr><td class="list_item"><input type="checkbox" name="item"  value ="New Item"> <span contenteditable="true">New Item</span><h4>x</h4></td></tr>');
  		$('#li_clone').clone().appendTo('#list').show();
-
  	} //internal if
   }) //keypress function
 ); // on
@@ -41,20 +41,29 @@ $('.arrow-down').click(function(){
 
 
 // Show h4 upon rollover of each li, underline span on rollover
-$('#list li').hover(
-	function() {
+$(this).find('#list').on({
+	mouseenter:function(){
 		$(this).find('h4').removeClass('toggle');
-		$(this).find('span').addClass('hover_span')
-}, function () {
+		$(this).find('span').addClass('hover_span');
+	},
+	mouseleave:function(){
 		$(this).find('h4').addClass('toggle');
-		$(this).find('span').removeClass('hover_span')
-}); //hover
-			
+		$(this).find('span').removeClass('hover_span');
+	}
+}, 'li'); //hover
+	
 
 //Remove li when h4 is clicked
-$('h4').click(function(event){
-	$(this).parent().addClass('toggle');
-});
+$(this).find('#list').on('click', 'h4', (function(event){
+	$(this).parent().hide();
+	console.log('wtf');
+})
+);
+
+// $(this).find('h4').on('click', (function(event){
+// 	$(this).parent().addClass('toggle');
+// })
+// );
 
 // Underline #clear and #remove when you hover over them
 $('#clear').hover(
