@@ -30,15 +30,6 @@ $('.arrow-down').click(function(){
   }) //keypress function
 ); // on
 
-	// $(this).find('#list li span').keypress(function(event){
-	// var keycode = (event.keycode ? event.keycode : event.which);
-	// if (keycode =='13'){
- // 		event.preventDefault();
- // 		$('#list').after('<tr><td class="list_item"><input type="checkbox" name="item"  value ="New Item"> <span contenteditable="true">New Item</span><h4>x</h4></td></tr>');
- // 	}; //internal if
- //  }); //keypress function
-
-
 
 // Show h4 upon rollover of each li, underline span on rollover
 $(this).find('#list').on({
@@ -60,10 +51,6 @@ $(this).find('#list').on('click', 'h4', (function(event){
 })
 );
 
-// $(this).find('h4').on('click', (function(event){
-// 	$(this).parent().addClass('toggle');
-// })
-// );
 
 // Underline #clear and #remove when you hover over them
 $('#clear').hover(
@@ -93,7 +80,24 @@ $('#remove').click(function(){
 	$('#list li input:checked').parent().remove();
 });
 
-}); // doc ready
+// //Select all the text when you click an li to edit 
+// $('#list li').on("focus keyup", function(event){
+// 	 var keycode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+//      if(keycode === 9 || !keycode){
+// 	var $this = $(this);
+// 	$this.select();
 
+// 	$this.on("mouseup", function(){
+// 		$this.off('mouseup');
+// 		return false;
+// 	});
+// }
+// });
+// // $('#list li').on('click', 'span', (function(event){
+// // 	$(this).dblclick();
+// // })
+// // );
+
+}); // doc ready
 
 
